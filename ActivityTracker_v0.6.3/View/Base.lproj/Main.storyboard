@@ -16,19 +16,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="J14-47-BI8">
-                                <rect key="frame" x="20" y="108" width="374" height="740"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="J14-47-BI8">
+                                <rect key="frame" x="1" y="89" width="412" height="772"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="N2H-b7-j9o">
-                                        <rect key="frame" x="0.0" y="0.0" width="374" height="191"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="N2H-b7-j9o">
+                                        <rect key="frame" x="0.0" y="0.0" width="412" height="256.5"/>
                                         <color key="backgroundColor" systemColor="systemMintColor"/>
                                     </view>
-                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="B2O-FY-xXC">
-                                        <rect key="frame" x="0.0" y="199" width="374" height="308"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B2O-FY-xXC">
+                                        <rect key="frame" x="0.0" y="257.5" width="412" height="257"/>
                                         <color key="backgroundColor" systemColor="systemTealColor"/>
                                     </view>
-                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GL3-vX-wDy">
-                                        <rect key="frame" x="0.0" y="515" width="374" height="225"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GL3-vX-wDy">
+                                        <rect key="frame" x="0.0" y="515.5" width="412" height="256.5"/>
                                         <color key="backgroundColor" systemColor="systemIndigoColor"/>
                                     </view>
                                 </subviews>
@@ -36,6 +36,12 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemGray5Color"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="J14-47-BI8" secondAttribute="bottom" constant="1" id="6NM-gL-71A"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="J14-47-BI8" secondAttribute="trailing" constant="1" id="FVh-cr-AR8"/>
+                            <constraint firstItem="J14-47-BI8" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="1" id="O3F-pG-HpL"/>
+                            <constraint firstItem="J14-47-BI8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="1" id="kx3-bE-bto"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="MainActivities" id="Lvk-dY-0f3">
                         <barButtonItem key="rightBarButtonItem" title="&gt;" id="FBi-Bo-kd6">
