@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		859EBCD128AFD09F00A2FFED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 859EBCD028AFD09F00A2FFED /* AppDelegate.swift */; };
 		859EBCD328AFD09F00A2FFED /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 859EBCD228AFD09F00A2FFED /* SceneDelegate.swift */; };
-		859EBCD528AFD09F00A2FFED /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 859EBCD428AFD09F00A2FFED /* ViewController.swift */; };
+		859EBCD528AFD09F00A2FFED /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 859EBCD428AFD09F00A2FFED /* MainViewController.swift */; };
 		859EBCD828AFD09F00A2FFED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 859EBCD628AFD09F00A2FFED /* Main.storyboard */; };
 		859EBCDB28AFD09F00A2FFED /* ActivityTracker_v0_6_3.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 859EBCD928AFD09F00A2FFED /* ActivityTracker_v0_6_3.xcdatamodeld */; };
 		859EBCDD28AFD0A100A2FFED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 859EBCDC28AFD0A100A2FFED /* Assets.xcassets */; };
@@ -20,7 +20,7 @@
 		859EBCCD28AFD09F00A2FFED /* ActivityTracker_v0.6.3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ActivityTracker_v0.6.3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		859EBCD028AFD09F00A2FFED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		859EBCD228AFD09F00A2FFED /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		859EBCD428AFD09F00A2FFED /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		859EBCD428AFD09F00A2FFED /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		859EBCD728AFD09F00A2FFED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		859EBCDA28AFD09F00A2FFED /* ActivityTracker_v0_6_3.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ActivityTracker_v0_6_3.xcdatamodel; sourceTree = "<group>"; };
 		859EBCDC28AFD0A100A2FFED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -58,16 +58,40 @@
 		859EBCCF28AFD09F00A2FFED /* ActivityTracker_v0.6.3 */ = {
 			isa = PBXGroup;
 			children = (
+				859EBCE828AFD10F00A2FFED /* Modell */,
+				859EBCE928AFD11A00A2FFED /* View */,
+				859EBCE728AFD0FC00A2FFED /* Controller */,
 				859EBCD028AFD09F00A2FFED /* AppDelegate.swift */,
 				859EBCD228AFD09F00A2FFED /* SceneDelegate.swift */,
-				859EBCD428AFD09F00A2FFED /* ViewController.swift */,
-				859EBCD628AFD09F00A2FFED /* Main.storyboard */,
 				859EBCDC28AFD0A100A2FFED /* Assets.xcassets */,
 				859EBCDE28AFD0A100A2FFED /* LaunchScreen.storyboard */,
 				859EBCE128AFD0A100A2FFED /* Info.plist */,
 				859EBCD928AFD09F00A2FFED /* ActivityTracker_v0_6_3.xcdatamodeld */,
 			);
 			path = ActivityTracker_v0.6.3;
+			sourceTree = "<group>";
+		};
+		859EBCE728AFD0FC00A2FFED /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				859EBCD428AFD09F00A2FFED /* MainViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		859EBCE828AFD10F00A2FFED /* Modell */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Modell;
+			sourceTree = "<group>";
+		};
+		859EBCE928AFD11A00A2FFED /* View */ = {
+			isa = PBXGroup;
+			children = (
+				859EBCD628AFD09F00A2FFED /* Main.storyboard */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -142,7 +166,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				859EBCDB28AFD09F00A2FFED /* ActivityTracker_v0_6_3.xcdatamodeld in Sources */,
-				859EBCD528AFD09F00A2FFED /* ViewController.swift in Sources */,
+				859EBCD528AFD09F00A2FFED /* MainViewController.swift in Sources */,
 				859EBCD128AFD09F00A2FFED /* AppDelegate.swift in Sources */,
 				859EBCD328AFD09F00A2FFED /* SceneDelegate.swift in Sources */,
 			);
