@@ -15,23 +15,16 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BBv-yo-wEa">
-                                <rect key="frame" x="175" y="417" width="67" height="62"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="-&gt;">
-                                    <fontDescription key="titleFontDescription" type="system" pointSize="40"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <segue destination="H9s-Du-eOP" kind="show" identifier="" id="egh-N8-1GY"/>
-                                </connections>
-                            </button>
-                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemGray5Color"/>
                     </view>
-                    <navigationItem key="navigationItem" title="MainActivities" id="Lvk-dY-0f3"/>
+                    <navigationItem key="navigationItem" title="MainActivities" id="Lvk-dY-0f3">
+                        <barButtonItem key="rightBarButtonItem" title="&gt;" id="FBi-Bo-kd6">
+                            <connections>
+                                <segue destination="H9s-Du-eOP" kind="show" id="CQN-7u-rT9"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <segue destination="H9s-Du-eOP" kind="show" identifier="toSubView" id="Q3X-MX-zep"/>
                     </connections>
@@ -47,24 +40,16 @@
                     <view key="view" contentMode="scaleToFill" id="e8n-wd-BnQ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="moW-Vb-DyB">
-                                <rect key="frame" x="174" y="417" width="67" height="62"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="-&gt;">
-                                    <fontDescription key="titleFontDescription" type="system" pointSize="40"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <segue destination="z04-na-TDO" kind="show" id="oJi-mW-0pT"/>
-                                </connections>
-                            </button>
-                        </subviews>
                         <viewLayoutGuide key="safeArea" id="R1E-L3-Tw9"/>
                         <color key="backgroundColor" systemColor="systemGray4Color"/>
                     </view>
                     <navigationItem key="navigationItem" title="SubActivities" id="6dn-B0-zlg">
                         <barButtonItem key="backBarButtonItem" title="Back" id="Pxi-ps-eHI"/>
+                        <barButtonItem key="rightBarButtonItem" title="&gt;" id="RgP-Gi-Klf">
+                            <connections>
+                                <segue destination="z04-na-TDO" kind="show" id="jAl-La-jlK"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <segue destination="z04-na-TDO" kind="show" identifier="toCounterView" id="YCh-E2-lXL"/>
@@ -113,7 +98,7 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="YCh-E2-lXL"/>
-        <segue reference="egh-N8-1GY"/>
+        <segue reference="Q3X-MX-zep"/>
     </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="systemGray3Color">
