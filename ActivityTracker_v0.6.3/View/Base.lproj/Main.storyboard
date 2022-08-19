@@ -19,17 +19,62 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="J14-47-BI8">
                                 <rect key="frame" x="1" y="89" width="412" height="772"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="N2H-b7-j9o">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="N2H-b7-j9o" userLabel="ViewUp">
                                         <rect key="frame" x="0.0" y="0.0" width="412" height="256.5"/>
+                                        <subviews>
+                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="W0V-pP-G6X" userLabel="Main Table View Up">
+                                                <rect key="frame" x="1" y="1" width="410" height="254.5"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <prototypes>
+                                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CellUp" id="I1e-Cx-ez5" userLabel="MainCell Up">
+                                                        <rect key="frame" x="0.0" y="44.5" width="410" height="43.5"/>
+                                                        <autoresizingMask key="autoresizingMask"/>
+                                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="I1e-Cx-ez5" id="vLX-49-qYn">
+                                                            <rect key="frame" x="0.0" y="0.0" width="410" height="43.5"/>
+                                                            <autoresizingMask key="autoresizingMask"/>
+                                                        </tableViewCellContentView>
+                                                    </tableViewCell>
+                                                </prototypes>
+                                            </tableView>
+                                        </subviews>
                                         <color key="backgroundColor" systemColor="systemMintColor"/>
+                                        <constraints>
+                                            <constraint firstItem="W0V-pP-G6X" firstAttribute="leading" secondItem="N2H-b7-j9o" secondAttribute="leading" constant="1" id="1Qe-JM-Af1"/>
+                                            <constraint firstItem="W0V-pP-G6X" firstAttribute="top" secondItem="N2H-b7-j9o" secondAttribute="top" constant="1" id="Gqb-Nl-yEn"/>
+                                            <constraint firstAttribute="bottom" secondItem="W0V-pP-G6X" secondAttribute="bottom" constant="1" id="HH2-cr-KvM"/>
+                                            <constraint firstAttribute="trailing" secondItem="W0V-pP-G6X" secondAttribute="trailing" constant="1" id="Wf8-Mz-scv"/>
+                                        </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B2O-FY-xXC">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B2O-FY-xXC" userLabel="ViewMiddle">
                                         <rect key="frame" x="0.0" y="257.5" width="412" height="257"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="diagram" translatesAutoresizingMaskIntoConstraints="NO" id="mX0-6F-k8e" userLabel="Main Diagram">
+                                                <rect key="frame" x="1" y="1" width="410" height="255"/>
+                                            </imageView>
+                                        </subviews>
                                         <color key="backgroundColor" systemColor="systemTealColor"/>
+                                        <constraints>
+                                            <constraint firstItem="mX0-6F-k8e" firstAttribute="leading" secondItem="B2O-FY-xXC" secondAttribute="leading" constant="1" id="11Y-lR-aQV"/>
+                                            <constraint firstItem="mX0-6F-k8e" firstAttribute="top" secondItem="B2O-FY-xXC" secondAttribute="top" constant="1" id="EyW-0W-4TU"/>
+                                            <constraint firstAttribute="trailing" secondItem="mX0-6F-k8e" secondAttribute="trailing" constant="1" id="Zka-ho-b5K"/>
+                                            <constraint firstAttribute="bottom" secondItem="mX0-6F-k8e" secondAttribute="bottom" constant="1" id="kZD-CT-cBU"/>
+                                        </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GL3-vX-wDy">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GL3-vX-wDy" userLabel="ViewBoottom">
                                         <rect key="frame" x="0.0" y="515.5" width="412" height="256.5"/>
+                                        <subviews>
+                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="tQn-wN-hdy" userLabel="Main Table View Down">
+                                                <rect key="frame" x="1" y="1" width="410" height="254.5"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                            </tableView>
+                                        </subviews>
                                         <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                                        <constraints>
+                                            <constraint firstItem="tQn-wN-hdy" firstAttribute="leading" secondItem="GL3-vX-wDy" secondAttribute="leading" constant="1" id="0Im-hW-BFh"/>
+                                            <constraint firstAttribute="bottom" secondItem="tQn-wN-hdy" secondAttribute="bottom" constant="1" id="2Eu-CM-5SN"/>
+                                            <constraint firstAttribute="trailing" secondItem="tQn-wN-hdy" secondAttribute="trailing" constant="1" id="2vD-T1-4x0"/>
+                                            <constraint firstItem="tQn-wN-hdy" firstAttribute="top" secondItem="GL3-vX-wDy" secondAttribute="top" constant="1" id="gPh-SD-dQy"/>
+                                        </constraints>
                                     </view>
                                 </subviews>
                             </stackView>
@@ -126,6 +171,10 @@
         <segue reference="Q3X-MX-zep"/>
     </inferredMetricsTieBreakers>
     <resources>
+        <image name="diagram" width="440" height="440"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemGray3Color">
             <color red="0.7803921568627451" green="0.7803921568627451" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
