@@ -16,6 +16,8 @@
 		859EBCE028AFD0A100A2FFED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 859EBCDE28AFD0A100A2FFED /* LaunchScreen.storyboard */; };
 		859EBCEB28AFD1FD00A2FFED /* SubViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 859EBCEA28AFD1FD00A2FFED /* SubViewController.swift */; };
 		859EBCED28AFD26800A2FFED /* CounterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 859EBCEC28AFD26800A2FFED /* CounterViewController.swift */; };
+		859EBCF028AFDE7000A2FFED /* MainDownTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 859EBCEE28AFDE7000A2FFED /* MainDownTableViewCell.xib */; };
+		859EBCF128AFDE7000A2FFED /* MainDownTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 859EBCEF28AFDE7000A2FFED /* MainDownTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		859EBCE128AFD0A100A2FFED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		859EBCEA28AFD1FD00A2FFED /* SubViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubViewController.swift; sourceTree = "<group>"; };
 		859EBCEC28AFD26800A2FFED /* CounterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterViewController.swift; sourceTree = "<group>"; };
+		859EBCEE28AFDE7000A2FFED /* MainDownTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainDownTableViewCell.xib; sourceTree = "<group>"; };
+		859EBCEF28AFDE7000A2FFED /* MainDownTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainDownTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +83,7 @@
 			isa = PBXGroup;
 			children = (
 				859EBCD428AFD09F00A2FFED /* MainViewController.swift */,
+				859EBCEF28AFDE7000A2FFED /* MainDownTableViewCell.swift */,
 				859EBCEA28AFD1FD00A2FFED /* SubViewController.swift */,
 				859EBCEC28AFD26800A2FFED /* CounterViewController.swift */,
 			);
@@ -96,6 +101,7 @@
 			isa = PBXGroup;
 			children = (
 				859EBCD628AFD09F00A2FFED /* Main.storyboard */,
+				859EBCEE28AFDE7000A2FFED /* MainDownTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -160,6 +166,7 @@
 			files = (
 				859EBCE028AFD0A100A2FFED /* LaunchScreen.storyboard in Resources */,
 				859EBCDD28AFD0A100A2FFED /* Assets.xcassets in Resources */,
+				859EBCF028AFDE7000A2FFED /* MainDownTableViewCell.xib in Resources */,
 				859EBCD828AFD09F00A2FFED /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -174,6 +181,7 @@
 				859EBCDB28AFD09F00A2FFED /* ActivityTracker_v0_6_3.xcdatamodeld in Sources */,
 				859EBCD528AFD09F00A2FFED /* MainViewController.swift in Sources */,
 				859EBCEB28AFD1FD00A2FFED /* SubViewController.swift in Sources */,
+				859EBCF128AFDE7000A2FFED /* MainDownTableViewCell.swift in Sources */,
 				859EBCED28AFD26800A2FFED /* CounterViewController.swift in Sources */,
 				859EBCD128AFD09F00A2FFED /* AppDelegate.swift in Sources */,
 				859EBCD328AFD09F00A2FFED /* SceneDelegate.swift in Sources */,
