@@ -14,6 +14,8 @@
 		859EBCDB28AFD09F00A2FFED /* ActivityTracker_v0_6_3.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 859EBCD928AFD09F00A2FFED /* ActivityTracker_v0_6_3.xcdatamodeld */; };
 		859EBCDD28AFD0A100A2FFED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 859EBCDC28AFD0A100A2FFED /* Assets.xcassets */; };
 		859EBCE028AFD0A100A2FFED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 859EBCDE28AFD0A100A2FFED /* LaunchScreen.storyboard */; };
+		859EBCEB28AFD1FD00A2FFED /* SubViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 859EBCEA28AFD1FD00A2FFED /* SubViewController.swift */; };
+		859EBCED28AFD26800A2FFED /* CounterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 859EBCEC28AFD26800A2FFED /* CounterViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		859EBCDC28AFD0A100A2FFED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		859EBCDF28AFD0A100A2FFED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		859EBCE128AFD0A100A2FFED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		859EBCEA28AFD1FD00A2FFED /* SubViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubViewController.swift; sourceTree = "<group>"; };
+		859EBCEC28AFD26800A2FFED /* CounterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +79,8 @@
 			isa = PBXGroup;
 			children = (
 				859EBCD428AFD09F00A2FFED /* MainViewController.swift */,
+				859EBCEA28AFD1FD00A2FFED /* SubViewController.swift */,
+				859EBCEC28AFD26800A2FFED /* CounterViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -167,6 +173,8 @@
 			files = (
 				859EBCDB28AFD09F00A2FFED /* ActivityTracker_v0_6_3.xcdatamodeld in Sources */,
 				859EBCD528AFD09F00A2FFED /* MainViewController.swift in Sources */,
+				859EBCEB28AFD1FD00A2FFED /* SubViewController.swift in Sources */,
+				859EBCED28AFD26800A2FFED /* CounterViewController.swift in Sources */,
 				859EBCD128AFD09F00A2FFED /* AppDelegate.swift in Sources */,
 				859EBCD328AFD09F00A2FFED /* SceneDelegate.swift in Sources */,
 			);

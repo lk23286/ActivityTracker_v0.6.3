@@ -18,10 +18,48 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <connections>
+                        <segue destination="H9s-Du-eOP" kind="show" identifier="toSubView" id="Q3X-MX-zep"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="20" y="69"/>
+        </scene>
+        <!--Sub View Controller-->
+        <scene sceneID="lun-YU-Wjk">
+            <objects>
+                <viewController id="H9s-Du-eOP" userLabel="Sub View Controller" customClass="SubViewController" customModule="ActivityTracker_v0_6_3" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="e8n-wd-BnQ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="R1E-L3-Tw9"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="6dn-B0-zlg"/>
+                    <connections>
+                        <segue destination="z04-na-TDO" kind="show" identifier="toCounterView" id="YCh-E2-lXL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="je7-7e-aGj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="762" y="69"/>
+        </scene>
+        <!--Counter View Controller-->
+        <scene sceneID="WnZ-wD-bDh">
+            <objects>
+                <viewController id="z04-na-TDO" customClass="CounterViewController" customModule="ActivityTracker_v0_6_3" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7eE-NQ-liC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="Hr2-p4-hTa"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="oxC-dD-AQs"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vxR-ze-1yL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1509" y="69"/>
         </scene>
     </scenes>
     <resources>
