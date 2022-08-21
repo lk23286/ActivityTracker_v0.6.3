@@ -18,6 +18,7 @@
 		859EBCED28AFD26800A2FFED /* CounterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 859EBCEC28AFD26800A2FFED /* CounterViewController.swift */; };
 		859EBCF028AFDE7000A2FFED /* MainDownTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 859EBCEE28AFDE7000A2FFED /* MainDownTableViewCell.xib */; };
 		859EBCF128AFDE7000A2FFED /* MainDownTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 859EBCEF28AFDE7000A2FFED /* MainDownTableViewCell.swift */; };
+		859EBCF328AFE67800A2FFED /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 859EBCF228AFE67800A2FFED /* DataStore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		859EBCEC28AFD26800A2FFED /* CounterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterViewController.swift; sourceTree = "<group>"; };
 		859EBCEE28AFDE7000A2FFED /* MainDownTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainDownTableViewCell.xib; sourceTree = "<group>"; };
 		859EBCEF28AFDE7000A2FFED /* MainDownTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainDownTableViewCell.swift; sourceTree = "<group>"; };
+		859EBCF228AFE67800A2FFED /* DataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +95,7 @@
 		859EBCE828AFD10F00A2FFED /* Modell */ = {
 			isa = PBXGroup;
 			children = (
+				859EBCF228AFE67800A2FFED /* DataStore.swift */,
 			);
 			path = Modell;
 			sourceTree = "<group>";
@@ -179,6 +182,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				859EBCDB28AFD09F00A2FFED /* ActivityTracker_v0_6_3.xcdatamodeld in Sources */,
+				859EBCF328AFE67800A2FFED /* DataStore.swift in Sources */,
 				859EBCD528AFD09F00A2FFED /* MainViewController.swift in Sources */,
 				859EBCEB28AFD1FD00A2FFED /* SubViewController.swift in Sources */,
 				859EBCF128AFDE7000A2FFED /* MainDownTableViewCell.swift in Sources */,

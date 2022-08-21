@@ -26,7 +26,7 @@
                                                 <rect key="frame" x="1" y="1" width="410" height="254.5"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <prototypes>
-                                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CellUp" id="I1e-Cx-ez5" userLabel="MainCell Up">
+                                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="MainCellUp" id="I1e-Cx-ez5" userLabel="MainCell Up">
                                                         <rect key="frame" x="0.0" y="44.5" width="410" height="43.5"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="I1e-Cx-ez5" id="vLX-49-qYn">
@@ -89,13 +89,27 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="MainActivities" id="Lvk-dY-0f3">
-                        <barButtonItem key="rightBarButtonItem" title="&gt;" id="FBi-Bo-kd6">
-                            <connections>
-                                <segue destination="H9s-Du-eOP" kind="show" id="CQN-7u-rT9"/>
-                            </connections>
-                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem title="&gt;" id="FBi-Bo-kd6">
+                                <connections>
+                                    <segue destination="H9s-Du-eOP" kind="show" id="CQN-7u-rT9"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="   +   " id="lGu-ai-0Qi">
+                                <connections>
+                                    <action selector="mainBarAddButtonPressed:" destination="BYZ-38-t0r" id="zdJ-Uf-4MF"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="   -  " id="v5a-Lq-5mj">
+                                <connections>
+                                    <action selector="mainBarRemoveButtonPressed:" destination="BYZ-38-t0r" id="36f-My-3ti"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
                     <connections>
+                        <outlet property="mainTableViewDown" destination="tQn-wN-hdy" id="FH6-bg-7tk"/>
+                        <outlet property="mainTableViewUp" destination="W0V-pP-G6X" id="9RL-Vi-jdA"/>
                         <segue destination="H9s-Du-eOP" kind="show" identifier="toSubView" id="Q3X-MX-zep"/>
                     </connections>
                 </viewController>

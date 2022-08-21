@@ -9,6 +9,16 @@ import UIKit
 
 class MainDownTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var activityLabel: UILabel!
+    @IBOutlet weak var achivedLabel: UILabel!
+    @IBOutlet weak var separatorLabel: UILabel!
+    @IBOutlet weak var goalLabel: UILabel!
+    @IBOutlet weak var unitLabel: UILabel!
+    @IBOutlet weak var precentLabel: UILabel!
+    
+    
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
