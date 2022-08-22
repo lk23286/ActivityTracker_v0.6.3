@@ -8,7 +8,7 @@
 import Foundation
 
 
-struct DataStore {
+struct Brain {
     
     var mainTableUpDefaultArray = ["Swift", "Sport", "Meditation", "Sleep"]
     var mainTableDownDefaultArray = [
@@ -21,6 +21,9 @@ struct DataStore {
     
     var mainTableUpArray = [String]()
     var mainTableDownArray = [DownTableRecord]()
+    
+    var tableUpArrays = [[String]]()
+    var tableDownArrays = [[DownTableRecord]]()
     
 }
 

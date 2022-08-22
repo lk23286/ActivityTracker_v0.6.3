@@ -12,7 +12,7 @@ class MainViewController: UIViewController {
     @IBOutlet weak var mainTableViewUp: UITableView!
     @IBOutlet weak var mainTableViewDown: UITableView!
     
-    var dataStore = DataStore()
+    var brain = Brain()
   
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,26 +28,26 @@ class MainViewController: UIViewController {
     @IBAction func mainBarAddButtonPressed(_ sender: UIBarButtonItem) {
         
         var textField = UITextField()
-        let index = dataStore.mainTableUpArray.count
+        let index = brain.mainTableUpArray.count
 
-        if dataStore.mainTableUpArray.count < K.maxNumberOfMainActivity {
-            print(dataStore.mainTableUpArray.count, K.maxNumberOfMainActivity)
+        if brain.mainTableUpArray.count < K.maxNumberOfMainActivity {
+            print(brain.mainTableUpArray.count, K.maxNumberOfMainActivity)
             let alert = UIAlertController(title: "Add New Activity", message: "", preferredStyle: .alert)
             let action = UIAlertAction(title: "Add Activity", style: .default) { [self] (action) in
                 
                 if textField.text! != "" {
                     
-                    dataStore.mainTableUpArray.append(textField.text!)
+                    brain.mainTableUpArray.append(textField.text!)
                     addActivityToDownTable(activity: textField.text!)
                 } else {
-                    dataStore.mainTableUpArray.append(dataStore.mainTableUpDefaultArray[index])
-                    addActivityToDownTable(activity: dataStore.mainTableUpDefaultArray[index])
+                    brain.mainTableUpArray.append(brain.mainTableUpDefaultArray[index])
+                    addActivityToDownTable(activity: brain.mainTableUpDefaultArray[index])
                 }
                 mainTableViewUp.reloadData()
                    }
                 alert.addTextField { [self] (alertTextField) in
                     
-                    alertTextField.placeholder = dataStore.mainTableUpDefaultArray[index]
+                    alertTextField.placeholder = brain.mainTableUpDefaultArray[index]
                     textField = alertTextField
                 }
                 alert.addAction(action)
@@ -58,24 +58,24 @@ class MainViewController: UIViewController {
     func addActivityToDownTable(activity: String) {
         
         let downTableRecord = DownTableRecord(activity: activity, achived: "1.0", goal: "2.0", precent: "50%")
-        dataStore.mainTableDownArray.append(downTableRecord)
-        if dataStore.mainTableDownArray.count == 4 {
-            dataStore.mainTableDownArray.append(DownTableRecord(activity: "Break", achived: "1.0", goal: "2.0", precent: "50%"))
+        brain.mainTableDownArray.append(downTableRecord)
+        if brain.mainTableDownArray.count == 4 {
+            brain.mainTableDownArray.append(DownTableRecord(activity: "Break", achived: "1.0", goal: "2.0", precent: "50%"))
         }
         mainTableViewDown.reloadData()
     }
   
     @IBAction func mainBarRemoveButtonPressed(_ sender: UIBarButtonItem) {
         
-        if dataStore.mainTableUpArray.count == 4 {
-            dataStore.mainTableDownArray.remove(at: 4)
+        if brain.mainTableUpArray.count == 4 {
+            brain.mainTableDownArray.remove(at: 4)
             mainTableViewDown.reloadData()
         }
         
-        if dataStore.mainTableUpArray.count > 0 {
-            dataStore.mainTableUpArray.removeLast()
+        if brain.mainTableUpArray.count > 0 {
+            brain.mainTableUpArray.removeLast()
             mainTableViewUp.reloadData()
-            dataStore.mainTableDownArray.remove(at: dataStore.mainTableUpArray.count)
+            brain.mainTableDownArray.remove(at: brain.mainTableUpArray.count)
             mainTableViewDown.reloadData()
         }
 //        else if dataStore.mainTableUpArray.count == 0   {
@@ -91,14 +91,14 @@ extension MainViewController: UITableViewDataSource,UITableViewDelegate {
         
         if tableView == mainTableViewUp {
             
-print(dataStore.mainTableUpArray.count)
+print(brain.mainTableUpArray.count)
             
-            return dataStore.mainTableUpArray.count
+            return brain.mainTableUpArray.count
             
         }
         
         if tableView == mainTableViewDown {
-            return dataStore.mainTableDownArray.count
+            return brain.mainTableDownArray.count
         }
         return Int()
         
@@ -108,7 +108,7 @@ print(dataStore.mainTableUpArray.count)
         
         if tableView == mainTableViewUp {
             let mainCellUp = tableView.dequeueReusableCell(withIdentifier: K.Main.Identifier.cellUp, for: indexPath)
-            mainCellUp.textLabel?.text = dataStore.mainTableUpArray[indexPath.row]
+            mainCellUp.textLabel?.text = brain.mainTableUpArray[indexPath.row]
             
             switch indexPath.row {
             case 0:
@@ -146,12 +146,12 @@ print(dataStore.mainTableUpArray.count)
             }
             mainCellDown.goalLabel.textColor = UIColor.green
             
-            mainCellDown.activityLabel.text = dataStore.mainTableDownArray[indexPath.row].activity
-            mainCellDown.achivedLabel.text = dataStore.mainTableDownArray[indexPath.row].achived
-            mainCellDown.separatorLabel.text = dataStore.mainTableDownArray[indexPath.row].separator
-            mainCellDown.goalLabel.text = dataStore.mainTableDownArray[indexPath.row].goal
-            mainCellDown.unitLabel.text = dataStore.mainTableDownArray[indexPath.row].unit
-            mainCellDown.precentLabel.text = dataStore.mainTableDownArray[indexPath.row].precent
+            mainCellDown.activityLabel.text = brain.mainTableDownArray[indexPath.row].activity
+            mainCellDown.achivedLabel.text = brain.mainTableDownArray[indexPath.row].achived
+            mainCellDown.separatorLabel.text = brain.mainTableDownArray[indexPath.row].separator
+            mainCellDown.goalLabel.text = brain.mainTableDownArray[indexPath.row].goal
+            mainCellDown.unitLabel.text = brain.mainTableDownArray[indexPath.row].unit
+            mainCellDown.precentLabel.text = brain.mainTableDownArray[indexPath.row].precent
             
             return mainCellDown
         }
@@ -175,17 +175,17 @@ print(dataStore.mainTableUpArray.count)
         if tableView == mainTableViewDown {
             
             var textField = UITextField()
-            let activity = dataStore.mainTableDownArray[indexPath.row].activity
-            let actualGoal = dataStore.mainTableDownArray[indexPath.row].goal
-            let actualyAchived = dataStore.mainTableDownArray[indexPath.row].achived
+            let activity = brain.mainTableDownArray[indexPath.row].activity
+            let actualGoal = brain.mainTableDownArray[indexPath.row].goal
+            let actualyAchived = brain.mainTableDownArray[indexPath.row].achived
             
             let alert = UIAlertController(title: "You can modify Goal of", message: activity, preferredStyle: .alert)
             let action = UIAlertAction(title: "Add Goal", style: .default) { [self] (action) in
                 let newGoal = textField.text!
                 
                 if newGoal != "" {
-                    dataStore.mainTableDownArray[indexPath.row].goal = newGoal
-                    dataStore.mainTableDownArray[indexPath.row].precent =  calculatePrecentFrom(achived: actualyAchived, goal: newGoal)
+                    brain.mainTableDownArray[indexPath.row].goal = newGoal
+                    brain.mainTableDownArray[indexPath.row].precent =  calculatePrecentFrom(achived: actualyAchived, goal: newGoal)
                     mainTableViewDown.reloadData()
                 }
 
