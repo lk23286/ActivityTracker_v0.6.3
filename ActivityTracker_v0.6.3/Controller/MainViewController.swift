@@ -28,18 +28,26 @@ class MainViewController: UIViewController {
     @IBAction func mainBarAddButtonPressed(_ sender: UIBarButtonItem) {
         
         var textField = UITextField()
-        
+        let index = dataStore.MainTableUpArray.count
+
         if dataStore.MainTableUpArray.count < K.maxNumberOfMainActivity {
             print(dataStore.MainTableUpArray.count, K.maxNumberOfMainActivity)
             let alert = UIAlertController(title: "Add New Activity", message: "", preferredStyle: .alert)
             let action = UIAlertAction(title: "Add Activity", style: .default) { [self] (action) in
-                let newActivity = textField.text!
-                dataStore.MainTableUpArray.append(newActivity)
+                
+                if textField.text! != "" {
+                    
+                    dataStore.MainTableUpArray.append(textField.text!)
+                    addActivityToDownTable(activity: textField.text!)
+                } else {
+                    dataStore.MainTableUpArray.append(dataStore.mainTableUpDefaultArray[index])
+                    addActivityToDownTable(activity: dataStore.mainTableUpDefaultArray[index])
+                }
                 mainTableViewUp.reloadData()
-                addActivityToDownTable(activity: newActivity)
                    }
-                alert.addTextField { (alertTextField) in
-                    alertTextField.placeholder = " Create New Activity"
+                alert.addTextField { [self] (alertTextField) in
+                    
+                    alertTextField.placeholder = dataStore.mainTableUpDefaultArray[index]
                     textField = alertTextField
                 }
                 alert.addAction(action)
