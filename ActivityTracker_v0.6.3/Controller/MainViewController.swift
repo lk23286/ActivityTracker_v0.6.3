@@ -217,24 +217,15 @@ print(brain.tableUpArrays[i].count)
     func calculatePrecentFrom( achived: String, goal: String) -> String {
         
         let achivedNumber = Double(achived) ?? 1.0
-        let goalNumber = Double(goal) ?? 1.0
-        let percent = achivedNumber / goalNumber
-
-        
         let formatter = NumberFormatter()
         formatter.numberStyle = .percent
-        
-        let percentString = formatter.string(from: percent as NSNumber) ?? "---"
-       
-       
-        
-print(percentString)
-        
-        return percentString
-        
+        if let goalNumber = Double(goal) {
+           let percent = achivedNumber / goalNumber
+           return formatter.string(from: percent as NSNumber) ?? ""
+        } else {
+          return "???"
+        }
     }
-    
-    
     
 }
 
