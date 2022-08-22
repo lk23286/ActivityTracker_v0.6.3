@@ -19,8 +19,8 @@ struct DataStore {
         DownTableRecord(activity: "Break", achived: "1.0", goal: "2.0", precent: "50%")
                         ]
     
-    var MainTableUpArray = [String]()
-    var MainTableDownArray = [DownTableRecord]()
+    var mainTableUpArray = [String]()
+    var mainTableDownArray = [DownTableRecord]()
     
 }
 

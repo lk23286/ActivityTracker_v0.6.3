@@ -28,19 +28,19 @@ class MainViewController: UIViewController {
     @IBAction func mainBarAddButtonPressed(_ sender: UIBarButtonItem) {
         
         var textField = UITextField()
-        let index = dataStore.MainTableUpArray.count
+        let index = dataStore.mainTableUpArray.count
 
-        if dataStore.MainTableUpArray.count < K.maxNumberOfMainActivity {
-            print(dataStore.MainTableUpArray.count, K.maxNumberOfMainActivity)
+        if dataStore.mainTableUpArray.count < K.maxNumberOfMainActivity {
+            print(dataStore.mainTableUpArray.count, K.maxNumberOfMainActivity)
             let alert = UIAlertController(title: "Add New Activity", message: "", preferredStyle: .alert)
             let action = UIAlertAction(title: "Add Activity", style: .default) { [self] (action) in
                 
                 if textField.text! != "" {
                     
-                    dataStore.MainTableUpArray.append(textField.text!)
+                    dataStore.mainTableUpArray.append(textField.text!)
                     addActivityToDownTable(activity: textField.text!)
                 } else {
-                    dataStore.MainTableUpArray.append(dataStore.mainTableUpDefaultArray[index])
+                    dataStore.mainTableUpArray.append(dataStore.mainTableUpDefaultArray[index])
                     addActivityToDownTable(activity: dataStore.mainTableUpDefaultArray[index])
                 }
                 mainTableViewUp.reloadData()
@@ -58,28 +58,28 @@ class MainViewController: UIViewController {
     func addActivityToDownTable(activity: String) {
         
         let downTableRecord = DownTableRecord(activity: activity, achived: "1.0", goal: "2.0", precent: "50%")
-        dataStore.MainTableDownArray.append(downTableRecord)
-        if dataStore.MainTableDownArray.count == 4 {
-            dataStore.MainTableDownArray.append(DownTableRecord(activity: "Break", achived: "1.0", goal: "2.0", precent: "50%"))
+        dataStore.mainTableDownArray.append(downTableRecord)
+        if dataStore.mainTableDownArray.count == 4 {
+            dataStore.mainTableDownArray.append(DownTableRecord(activity: "Break", achived: "1.0", goal: "2.0", precent: "50%"))
         }
         mainTableViewDown.reloadData()
     }
   
     @IBAction func mainBarRemoveButtonPressed(_ sender: UIBarButtonItem) {
         
-        if dataStore.MainTableUpArray.count == 4 {
-            dataStore.MainTableDownArray.remove(at: 4)
+        if dataStore.mainTableUpArray.count == 4 {
+            dataStore.mainTableDownArray.remove(at: 4)
             mainTableViewDown.reloadData()
         }
         
-        if dataStore.MainTableUpArray.count > 0 {
-            dataStore.MainTableUpArray.removeLast()
+        if dataStore.mainTableUpArray.count > 0 {
+            dataStore.mainTableUpArray.removeLast()
             mainTableViewUp.reloadData()
-            dataStore.MainTableDownArray.remove(at: dataStore.MainTableUpArray.count)
+            dataStore.mainTableDownArray.remove(at: dataStore.mainTableUpArray.count)
             mainTableViewDown.reloadData()
         }
-//        else if dataStore.MainTableUpArray.count == 0   {
-//            dataStore.MainTableDownArray.removeAll()
+//        else if dataStore.mainTableUpArray.count == 0   {
+//            dataStore.mainTableDownArray.removeAll()
 //            mainTableViewDown.reloadData()
 //        }
     }
@@ -91,14 +91,14 @@ extension MainViewController: UITableViewDataSource,UITableViewDelegate {
         
         if tableView == mainTableViewUp {
             
-print(dataStore.MainTableUpArray.count)
+print(dataStore.mainTableUpArray.count)
             
-            return dataStore.MainTableUpArray.count
+            return dataStore.mainTableUpArray.count
             
         }
         
         if tableView == mainTableViewDown {
-            return dataStore.MainTableDownArray.count
+            return dataStore.mainTableDownArray.count
         }
         return Int()
         
@@ -108,7 +108,7 @@ print(dataStore.MainTableUpArray.count)
         
         if tableView == mainTableViewUp {
             let mainCellUp = tableView.dequeueReusableCell(withIdentifier: K.Main.Identifier.cellUp, for: indexPath)
-            mainCellUp.textLabel?.text = dataStore.MainTableUpArray[indexPath.row]
+            mainCellUp.textLabel?.text = dataStore.mainTableUpArray[indexPath.row]
             
             switch indexPath.row {
             case 0:
@@ -146,12 +146,12 @@ print(dataStore.MainTableUpArray.count)
             }
             mainCellDown.goalLabel.textColor = UIColor.green
             
-            mainCellDown.activityLabel.text = dataStore.MainTableDownArray[indexPath.row].activity
-            mainCellDown.achivedLabel.text = dataStore.MainTableDownArray[indexPath.row].achived
-            mainCellDown.separatorLabel.text = dataStore.MainTableDownArray[indexPath.row].separator
-            mainCellDown.goalLabel.text = dataStore.MainTableDownArray[indexPath.row].goal
-            mainCellDown.unitLabel.text = dataStore.MainTableDownArray[indexPath.row].unit
-            mainCellDown.precentLabel.text = dataStore.MainTableDownArray[indexPath.row].precent
+            mainCellDown.activityLabel.text = dataStore.mainTableDownArray[indexPath.row].activity
+            mainCellDown.achivedLabel.text = dataStore.mainTableDownArray[indexPath.row].achived
+            mainCellDown.separatorLabel.text = dataStore.mainTableDownArray[indexPath.row].separator
+            mainCellDown.goalLabel.text = dataStore.mainTableDownArray[indexPath.row].goal
+            mainCellDown.unitLabel.text = dataStore.mainTableDownArray[indexPath.row].unit
+            mainCellDown.precentLabel.text = dataStore.mainTableDownArray[indexPath.row].precent
             
             return mainCellDown
         }
@@ -175,17 +175,17 @@ print(dataStore.MainTableUpArray.count)
         if tableView == mainTableViewDown {
             
             var textField = UITextField()
-            let activity = dataStore.MainTableDownArray[indexPath.row].activity
-            let actualGoal = dataStore.MainTableDownArray[indexPath.row].goal
-            let actualyAchived = dataStore.MainTableDownArray[indexPath.row].achived
+            let activity = dataStore.mainTableDownArray[indexPath.row].activity
+            let actualGoal = dataStore.mainTableDownArray[indexPath.row].goal
+            let actualyAchived = dataStore.mainTableDownArray[indexPath.row].achived
             
             let alert = UIAlertController(title: "You can modify Goal of", message: activity, preferredStyle: .alert)
             let action = UIAlertAction(title: "Add Goal", style: .default) { [self] (action) in
                 let newGoal = textField.text!
                 
                 if newGoal != "" {
-                    dataStore.MainTableDownArray[indexPath.row].goal = newGoal
-                    dataStore.MainTableDownArray[indexPath.row].precent =  calculatePrecentFrom(achived: actualyAchived, goal: newGoal)
+                    dataStore.mainTableDownArray[indexPath.row].goal = newGoal
+                    dataStore.mainTableDownArray[indexPath.row].precent =  calculatePrecentFrom(achived: actualyAchived, goal: newGoal)
                     mainTableViewDown.reloadData()
                 }
 
