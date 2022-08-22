@@ -10,6 +10,9 @@ import Foundation
 
 struct Brain {
     
+     var tableUpEmptyArray = [String]()
+     var tableDownEmptyArray = [DownTableRecord]()
+
     var mainTableUpDefaultArray = ["Swift", "Sport", "Meditation", "Sleep"]
     var mainTableDownDefaultArray = [
         DownTableRecord(activity: "Swift", achived: "2.0", goal: "10", precent: "20%"),
@@ -18,9 +21,8 @@ struct Brain {
         DownTableRecord(activity: "Sleep", achived: "7.0", goal: "7.0", precent: "100%"),
         DownTableRecord(activity: "Break", achived: "1.0", goal: "2.0", precent: "50%")
                         ]
-    
-    var mainTableUpArray = [String]()
-    var mainTableDownArray = [DownTableRecord]()
+
+ 
     
     var tableUpArrays = [[String]]()
     var tableDownArrays = [[DownTableRecord]]()
