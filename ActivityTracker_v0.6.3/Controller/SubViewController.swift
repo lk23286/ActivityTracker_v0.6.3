@@ -61,19 +61,12 @@ class SubViewController: UIViewController,
                 chartView4.models = createModels4()
     }
 
-   fileprivate func createModels4() -> [PieSliceModel] {
-           let models = [
-               PieSliceModel(value: 90, color: colors[0]),
-               PieSliceModel(value: 10, color: colors[1])
-           ]
-           currentColorIndex = models.count
-           return models
-       }
+
    
     fileprivate func createModels1() -> [PieSliceModel] {
             let models = [
-                PieSliceModel(value: 20, color: colors[2]),
-                PieSliceModel(value: 80, color: colors[3])
+                PieSliceModel(value: 20, color: colors[0]),
+                PieSliceModel(value: 80, color: colors[1])
             ]
             currentColorIndex = models.count
             return models
@@ -81,8 +74,8 @@ class SubViewController: UIViewController,
  
     fileprivate func createModels2() -> [PieSliceModel] {
             let models = [
-                PieSliceModel(value: 15, color: colors[4]),
-                PieSliceModel(value: 85, color: colors[5])
+                PieSliceModel(value: 15, color: colors[2]),
+                PieSliceModel(value: 85, color: colors[3])
             ]
             
             currentColorIndex = models.count
@@ -91,14 +84,25 @@ class SubViewController: UIViewController,
   
     fileprivate func createModels3() -> [PieSliceModel] {
             let models = [
-                PieSliceModel(value: 60, color: colors[6]),
-                PieSliceModel(value: 40, color: colors[7]),
+                PieSliceModel(value: 60, color: colors[4]),
+                PieSliceModel(value: 40, color: colors[5]),
             ]
             currentColorIndex = models.count
             return models
         }
     
-    fileprivate func createPlainTextLayer4() -> PiePlainTextLayer {
+    fileprivate func createModels4() -> [PieSliceModel] {
+            let models = [
+                PieSliceModel(value: 90, color: colors[6]),
+                PieSliceModel(value: 10, color: colors[7])
+            ]
+            currentColorIndex = models.count
+            return models
+        }
+    
+
+    
+    fileprivate func createPlainTextLayer1() -> PiePlainTextLayer {
            let textLayerSettings = PiePlainTextLayerSettings()
            textLayerSettings.viewRadius = 55
            textLayerSettings.hideOnOverflow = true
@@ -106,12 +110,11 @@ class SubViewController: UIViewController,
            textLayerSettings.label.textGenerator = {slice in
                return  ""
            }
-           
            let textLayer = PiePlainTextLayer()
            textLayer.settings = textLayerSettings
            return textLayer
        }
-
+    
     fileprivate func createPlainTextLayer2() -> PiePlainTextLayer {
            let textLayerSettings = PiePlainTextLayerSettings()
            textLayerSettings.viewRadius = 55
@@ -138,7 +141,7 @@ class SubViewController: UIViewController,
            return textLayer
        }
     
-    fileprivate func createPlainTextLayer1() -> PiePlainTextLayer {
+    fileprivate func createPlainTextLayer4() -> PiePlainTextLayer {
            let textLayerSettings = PiePlainTextLayerSettings()
            textLayerSettings.viewRadius = 55
            textLayerSettings.hideOnOverflow = true
@@ -146,10 +149,12 @@ class SubViewController: UIViewController,
            textLayerSettings.label.textGenerator = {slice in
                return  ""
            }
+           
            let textLayer = PiePlainTextLayer()
            textLayer.settings = textLayerSettings
            return textLayer
        }
+
    
     fileprivate func createTextWithLinesLayer1() -> PieLineTextLayer {
         let lineTextLayer = PieLineTextLayer()
