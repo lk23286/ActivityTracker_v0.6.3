@@ -7,6 +7,9 @@
 
 import UIKit
 
+import PieCharts
+
+
 class SubViewController: UIViewController {
 
     override func viewDidLoad() {
