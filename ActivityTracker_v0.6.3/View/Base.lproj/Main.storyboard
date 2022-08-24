@@ -125,6 +125,28 @@
                     <view key="view" contentMode="scaleToFill" id="e8n-wd-BnQ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Trf-OK-ASu" customClass="PieChart" customModule="PieCharts">
+                                <rect key="frame" x="100" y="100" width="220" height="220"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RdE-LV-6CH" customClass="PieChart" customModule="PieCharts">
+                                <rect key="frame" x="100" y="100" width="220" height="220"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8wk-ee-BOk" customClass="PieChart" customModule="PieCharts">
+                                <rect key="frame" x="100" y="100" width="220" height="220"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lwv-3t-rUP" customClass="PieChart" customModule="PieCharts">
+                                <rect key="frame" x="100" y="100" width="220" height="220"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="R1E-L3-Tw9"/>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
@@ -137,6 +159,10 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="chartView1" destination="Trf-OK-ASu" id="RNW-bW-8Ha"/>
+                        <outlet property="chartView2" destination="RdE-LV-6CH" id="GSn-qX-69f"/>
+                        <outlet property="chartView3" destination="8wk-ee-BOk" id="r64-4S-Pu7"/>
+                        <outlet property="chartView4" destination="lwv-3t-rUP" id="hYJ-DX-OJq"/>
                         <segue destination="z04-na-TDO" kind="show" identifier="toCounterView" id="YCh-E2-lXL"/>
                     </connections>
                 </viewController>
@@ -190,6 +216,9 @@
     </inferredMetricsTieBreakers>
     <resources>
         <image name="diagram" width="440" height="440"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemGray3Color">
             <color red="0.7803921568627451" green="0.7803921568627451" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
