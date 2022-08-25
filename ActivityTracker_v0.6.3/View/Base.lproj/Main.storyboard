@@ -131,7 +131,28 @@
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="N3K-68-ql6" userLabel="ViewUp">
                                         <rect key="frame" x="0.0" y="0.0" width="373" height="228.66666666666666"/>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <subviews>
+                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="BpQ-Dp-4gn">
+                                                <rect key="frame" x="1" y="1" width="371" height="226.66666666666666"/>
+                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <prototypes>
+                                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="SubCellUp" id="0sd-gQ-kut">
+                                                        <rect key="frame" x="0.0" y="44.666666030883789" width="371" height="43.666667938232422"/>
+                                                        <autoresizingMask key="autoresizingMask"/>
+                                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="0sd-gQ-kut" id="SWZ-w7-HMi">
+                                                            <rect key="frame" x="0.0" y="0.0" width="371" height="43.666667938232422"/>
+                                                            <autoresizingMask key="autoresizingMask"/>
+                                                        </tableViewCellContentView>
+                                                    </tableViewCell>
+                                                </prototypes>
+                                            </tableView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="BpQ-Dp-4gn" secondAttribute="trailing" constant="1" id="fBW-Gq-avd"/>
+                                            <constraint firstAttribute="bottom" secondItem="BpQ-Dp-4gn" secondAttribute="bottom" constant="1" id="ffr-4v-HHg"/>
+                                            <constraint firstItem="BpQ-Dp-4gn" firstAttribute="top" secondItem="N3K-68-ql6" secondAttribute="top" constant="1" id="mcY-H3-1Mz"/>
+                                            <constraint firstItem="BpQ-Dp-4gn" firstAttribute="leading" secondItem="N3K-68-ql6" secondAttribute="leading" constant="1" id="zWe-Vq-eRW"/>
+                                        </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xbb-j0-meN" userLabel="ViewMiddle">
                                         <rect key="frame" x="0.0" y="229.66666666666669" width="373" height="228.66666666666669"/>
@@ -194,7 +215,18 @@
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hJO-s6-nQN" userLabel="ViewDown">
                                         <rect key="frame" x="0.0" y="459.33333333333343" width="373" height="228.66666666666669"/>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <subviews>
+                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="OeT-NZ-jdB">
+                                                <rect key="frame" x="1" y="1" width="371" height="226.66666666666666"/>
+                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </tableView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="OeT-NZ-jdB" firstAttribute="top" secondItem="hJO-s6-nQN" secondAttribute="top" constant="1" id="Alo-2z-6NL"/>
+                                            <constraint firstAttribute="trailing" secondItem="OeT-NZ-jdB" secondAttribute="trailing" constant="1" id="EUq-dm-XZI"/>
+                                            <constraint firstItem="OeT-NZ-jdB" firstAttribute="leading" secondItem="hJO-s6-nQN" secondAttribute="leading" constant="1" id="MlM-e6-19i"/>
+                                            <constraint firstAttribute="bottom" secondItem="OeT-NZ-jdB" secondAttribute="bottom" constant="1" id="k0r-Qi-0OG"/>
+                                        </constraints>
                                     </view>
                                 </subviews>
                             </stackView>
@@ -274,9 +306,6 @@
     </inferredMetricsTieBreakers>
     <resources>
         <image name="diagram" width="440" height="440"/>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
         <systemColor name="systemGray3Color">
             <color red="0.7803921568627451" green="0.7803921568627451" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

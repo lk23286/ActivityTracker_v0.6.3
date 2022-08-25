@@ -43,10 +43,19 @@ struct K {
     struct Main {
         struct Identifier {
             static var segue = "toSubView"
-            static var cellDown = "MainCellDown"
             static var cellUp = "MainCellUp"
+            static var cellDown = "MainCellDown"
         }
         static var nibName = "MainDownTableViewCell"
+        static let maxNumberOfActivity = 4
     }
-   static let maxNumberOfMainActivity = 4
+    struct Sub {
+        struct Identifier {
+            static var segue = "toCounterView"
+            static var cellUp = "SubCellUp"
+            static var cellDown = "SubCellDown"
+            
+        }
+    }
+   
 }
