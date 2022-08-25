@@ -126,69 +126,87 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xbb-j0-meN" userLabel="ViewMiddle">
-                                <rect key="frame" x="87" y="306" width="201" height="201"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="mGY-nc-Uxd">
+                                <rect key="frame" x="1" y="89" width="373" height="688"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Trf-OK-ASu" customClass="PieChart" customModule="PieCharts">
-                                        <rect key="frame" x="1" y="1" width="200" height="200"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="N3K-68-ql6" userLabel="ViewUp">
+                                        <rect key="frame" x="0.0" y="0.0" width="373" height="228.66666666666666"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xbb-j0-meN" userLabel="ViewMiddle">
+                                        <rect key="frame" x="0.0" y="229.66666666666669" width="373" height="228.66666666666669"/>
                                         <subviews>
-                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RdE-LV-6CH" customClass="PieChart" customModule="PieCharts">
-                                                <rect key="frame" x="25" y="25" width="150" height="150"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Trf-OK-ASu" customClass="PieChart" customModule="PieCharts">
+                                                <rect key="frame" x="85" y="8" width="200" height="200"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                                 <subviews>
-                                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8wk-ee-BOk" customClass="PieChart" customModule="PieCharts">
-                                                        <rect key="frame" x="25" y="25" width="100" height="100"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RdE-LV-6CH" customClass="PieChart" customModule="PieCharts">
+                                                        <rect key="frame" x="25" y="25" width="150" height="150"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                                         <subviews>
-                                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lwv-3t-rUP" customClass="PieChart" customModule="PieCharts">
-                                                                <rect key="frame" x="25" y="25" width="50" height="50"/>
-                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8wk-ee-BOk" customClass="PieChart" customModule="PieCharts">
+                                                                <rect key="frame" x="25" y="25" width="100" height="100"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                                                <subviews>
+                                                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lwv-3t-rUP" customClass="PieChart" customModule="PieCharts">
+                                                                        <rect key="frame" x="25" y="25" width="50" height="50"/>
+                                                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                                                        <userDefinedRuntimeAttributes>
+                                                                            <userDefinedRuntimeAttribute type="number" keyPath="outerRadius">
+                                                                                <real key="value" value="25"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                            <userDefinedRuntimeAttribute type="number" keyPath="innerRadius">
+                                                                                <real key="value" value="10"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                        </userDefinedRuntimeAttributes>
+                                                                    </view>
+                                                                </subviews>
                                                                 <userDefinedRuntimeAttributes>
                                                                     <userDefinedRuntimeAttribute type="number" keyPath="outerRadius">
-                                                                        <real key="value" value="25"/>
+                                                                        <real key="value" value="50"/>
                                                                     </userDefinedRuntimeAttribute>
                                                                     <userDefinedRuntimeAttribute type="number" keyPath="innerRadius">
-                                                                        <real key="value" value="10"/>
+                                                                        <real key="value" value="30"/>
                                                                     </userDefinedRuntimeAttribute>
                                                                 </userDefinedRuntimeAttributes>
                                                             </view>
                                                         </subviews>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="outerRadius">
-                                                                <real key="value" value="50"/>
+                                                                <real key="value" value="75"/>
                                                             </userDefinedRuntimeAttribute>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="innerRadius">
-                                                                <real key="value" value="30"/>
+                                                                <real key="value" value="55"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
                                                 </subviews>
                                                 <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="outerRadius">
-                                                        <real key="value" value="75"/>
-                                                    </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="innerRadius">
-                                                        <real key="value" value="55"/>
+                                                        <real key="value" value="80"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="outerRadius">
+                                                        <real key="value" value="100"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                         </subviews>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="innerRadius">
-                                                <real key="value" value="80"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="outerRadius">
-                                                <real key="value" value="100"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hJO-s6-nQN" userLabel="ViewDown">
+                                        <rect key="frame" x="0.0" y="459.33333333333343" width="373" height="228.66666666666669"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     </view>
                                 </subviews>
-                            </view>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="R1E-L3-Tw9"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="R1E-L3-Tw9" firstAttribute="bottom" secondItem="mGY-nc-Uxd" secondAttribute="bottom" constant="1" id="BeW-L0-8FY"/>
+                            <constraint firstItem="mGY-nc-Uxd" firstAttribute="leading" secondItem="R1E-L3-Tw9" secondAttribute="leading" constant="1" id="UPs-Te-5VN"/>
+                            <constraint firstItem="R1E-L3-Tw9" firstAttribute="trailing" secondItem="mGY-nc-Uxd" secondAttribute="trailing" constant="1" id="YbM-nY-K2o"/>
+                            <constraint firstItem="mGY-nc-Uxd" firstAttribute="top" secondItem="R1E-L3-Tw9" secondAttribute="top" constant="1" id="qzV-0n-xji"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="SubActivities" id="6dn-B0-zlg">
                         <barButtonItem key="backBarButtonItem" title="Back" id="Pxi-ps-eHI"/>
@@ -256,6 +274,9 @@
     </inferredMetricsTieBreakers>
     <resources>
         <image name="diagram" width="440" height="440"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemGray3Color">
             <color red="0.7803921568627451" green="0.7803921568627451" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
