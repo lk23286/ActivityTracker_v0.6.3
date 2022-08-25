@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Kwl-1n-qM4">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -13,24 +13,24 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="ActivityTracker_v0_6_3" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="J14-47-BI8">
-                                <rect key="frame" x="1" y="89" width="412" height="772"/>
+                                <rect key="frame" x="1" y="89" width="373" height="688"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="N2H-b7-j9o" userLabel="ViewUp">
-                                        <rect key="frame" x="0.0" y="0.0" width="412" height="256.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="373" height="228.66666666666666"/>
                                         <subviews>
                                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="W0V-pP-G6X" userLabel="Main Table View Up">
-                                                <rect key="frame" x="1" y="1" width="410" height="254.5"/>
+                                                <rect key="frame" x="1" y="1" width="371" height="226.66666666666666"/>
                                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <prototypes>
                                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="MainCellUp" id="I1e-Cx-ez5" userLabel="MainCell Up">
-                                                        <rect key="frame" x="0.0" y="44.5" width="410" height="43.5"/>
+                                                        <rect key="frame" x="0.0" y="44.666666030883789" width="371" height="43.666667938232422"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="I1e-Cx-ez5" id="vLX-49-qYn">
-                                                            <rect key="frame" x="0.0" y="0.0" width="410" height="43.5"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="371" height="43.666667938232422"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                         </tableViewCellContentView>
                                                     </tableViewCell>
@@ -45,10 +45,10 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B2O-FY-xXC" userLabel="ViewMiddle">
-                                        <rect key="frame" x="0.0" y="257.5" width="412" height="257"/>
+                                        <rect key="frame" x="0.0" y="229.66666666666669" width="373" height="228.66666666666669"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="diagram" translatesAutoresizingMaskIntoConstraints="NO" id="mX0-6F-k8e" userLabel="Main Diagram">
-                                                <rect key="frame" x="1" y="1" width="410" height="255"/>
+                                                <rect key="frame" x="1" y="1" width="371" height="226.66666666666666"/>
                                             </imageView>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -60,10 +60,10 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GL3-vX-wDy" userLabel="ViewBoottom">
-                                        <rect key="frame" x="0.0" y="515.5" width="412" height="256.5"/>
+                                        <rect key="frame" x="0.0" y="459.33333333333343" width="373" height="228.66666666666669"/>
                                         <subviews>
                                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="tQn-wN-hdy" userLabel="Main Table View Down">
-                                                <rect key="frame" x="1" y="1" width="410" height="254.5"/>
+                                                <rect key="frame" x="1" y="1" width="371" height="226.66666666666666"/>
                                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <color key="sectionIndexBackgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </tableView>
@@ -123,48 +123,38 @@
             <objects>
                 <viewController id="H9s-Du-eOP" userLabel="Sub View Controller" customClass="SubViewController" customModule="ActivityTracker_v0_6_3" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="e8n-wd-BnQ">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="hCv-do-3wk">
-                                <rect key="frame" x="1" y="1" width="412" height="860"/>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xbb-j0-meN" userLabel="ViewMiddle">
+                                <rect key="frame" x="87" y="306" width="201" height="201"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mbq-4f-Idk" userLabel="ViewUp">
-                                        <rect key="frame" x="0.0" y="0.0" width="412" height="286"/>
-                                    </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xbb-j0-meN" userLabel="ViewMiddle">
-                                        <rect key="frame" x="0.0" y="287" width="412" height="286"/>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Trf-OK-ASu" customClass="PieChart" customModule="PieCharts">
+                                        <rect key="frame" x="1" y="1" width="200" height="200"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <subviews>
-                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MLm-7i-1K7" userLabel="diagram">
-                                                <rect key="frame" x="86" y="23" width="240" height="240"/>
+                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RdE-LV-6CH" customClass="PieChart" customModule="PieCharts">
+                                                <rect key="frame" x="25" y="25" width="150" height="150"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <subviews>
-                                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Trf-OK-ASu" customClass="PieChart" customModule="PieCharts">
-                                                        <rect key="frame" x="20" y="20" width="200" height="200"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        <userDefinedRuntimeAttributes>
-                                                            <userDefinedRuntimeAttribute type="number" keyPath="innerRadius">
-                                                                <real key="value" value="80"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                            <userDefinedRuntimeAttribute type="number" keyPath="outerRadius">
-                                                                <real key="value" value="100"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                        </userDefinedRuntimeAttributes>
-                                                    </view>
-                                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RdE-LV-6CH" customClass="PieChart" customModule="PieCharts">
-                                                        <rect key="frame" x="20" y="20" width="200" height="200"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        <userDefinedRuntimeAttributes>
-                                                            <userDefinedRuntimeAttribute type="number" keyPath="outerRadius">
-                                                                <real key="value" value="75"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                            <userDefinedRuntimeAttribute type="number" keyPath="innerRadius">
-                                                                <real key="value" value="55"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                        </userDefinedRuntimeAttributes>
-                                                    </view>
                                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8wk-ee-BOk" customClass="PieChart" customModule="PieCharts">
-                                                        <rect key="frame" x="20" y="20" width="200" height="200"/>
+                                                        <rect key="frame" x="25" y="25" width="100" height="100"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <subviews>
+                                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lwv-3t-rUP" customClass="PieChart" customModule="PieCharts">
+                                                                <rect key="frame" x="25" y="25" width="50" height="50"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="outerRadius">
+                                                                        <real key="value" value="25"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="innerRadius">
+                                                                        <real key="value" value="10"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                            </view>
+                                                        </subviews>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="outerRadius">
                                                                 <real key="value" value="50"/>
@@ -174,40 +164,31 @@
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
-                                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lwv-3t-rUP" customClass="PieChart" customModule="PieCharts">
-                                                        <rect key="frame" x="20" y="20" width="200" height="200"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        <userDefinedRuntimeAttributes>
-                                                            <userDefinedRuntimeAttribute type="number" keyPath="outerRadius">
-                                                                <real key="value" value="25"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                            <userDefinedRuntimeAttribute type="number" keyPath="innerRadius">
-                                                                <real key="value" value="10"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                        </userDefinedRuntimeAttributes>
-                                                    </view>
                                                 </subviews>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="outerRadius">
+                                                        <real key="value" value="75"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="innerRadius">
+                                                        <real key="value" value="55"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
                                             </view>
                                         </subviews>
-                                        <constraints>
-                                            <constraint firstItem="MLm-7i-1K7" firstAttribute="centerY" secondItem="xbb-j0-meN" secondAttribute="centerY" id="OjN-Oo-T0h"/>
-                                            <constraint firstItem="MLm-7i-1K7" firstAttribute="centerX" secondItem="xbb-j0-meN" secondAttribute="centerX" id="sPY-3P-vWw"/>
-                                        </constraints>
-                                    </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kRQ-2G-mGi" userLabel="ViewDown">
-                                        <rect key="frame" x="0.0" y="574" width="412" height="286"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="innerRadius">
+                                                <real key="value" value="80"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="outerRadius">
+                                                <real key="value" value="100"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                     </view>
                                 </subviews>
-                            </stackView>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="R1E-L3-Tw9"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="hCv-do-3wk" firstAttribute="leading" secondItem="R1E-L3-Tw9" secondAttribute="leading" constant="1" id="baB-gC-0ho"/>
-                            <constraint firstItem="R1E-L3-Tw9" firstAttribute="bottom" secondItem="hCv-do-3wk" secondAttribute="bottom" constant="1" id="de2-qf-Ds5"/>
-                            <constraint firstItem="hCv-do-3wk" firstAttribute="top" secondItem="e8n-wd-BnQ" secondAttribute="top" constant="1" id="fzg-qv-X78"/>
-                            <constraint firstItem="R1E-L3-Tw9" firstAttribute="trailing" secondItem="hCv-do-3wk" secondAttribute="trailing" constant="1" id="xkq-bh-tvT"/>
-                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="SubActivities" id="6dn-B0-zlg">
                         <barButtonItem key="backBarButtonItem" title="Back" id="Pxi-ps-eHI"/>
@@ -227,14 +208,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="je7-7e-aGj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1671.0144927536232" y="68.973214285714278"/>
+            <point key="canvasLocation" x="1669.5999999999999" y="68.7192118226601"/>
         </scene>
         <!--Counter-->
         <scene sceneID="WnZ-wD-bDh">
             <objects>
                 <viewController id="z04-na-TDO" customClass="CounterViewController" customModule="ActivityTracker_v0_6_3" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7eE-NQ-liC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="Hr2-p4-hTa"/>
                         <color key="backgroundColor" systemColor="systemGray3Color"/>
@@ -253,7 +234,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Kwl-1n-qM4" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="LRD-hu-osK">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <textAttributes key="titleTextAttributes">
                             <color key="textColor" systemColor="tintColor"/>
