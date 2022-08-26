@@ -16,7 +16,7 @@ class SubViewController: UIViewController,
     @IBOutlet weak var subTableViewDown: UITableView!
     
     var brain = Brain()
-    var i = 0   // it defines which table..Arrays are used to the the Main Activity View
+    var i = 1   // it defines which table..Arrays are used to the the Main Activity View
                 // 0: MainActivities
                 // 1: SubActivities of first Activity
                 // 2: SubActivities of second Activity
@@ -135,7 +135,6 @@ class SubViewController: UIViewController,
     }
     
     
-
     func addActivityToDownTable(activity: String) {
         
         let downTableRecord = DownTableRecord(activity: activity, achived: "1.0", goal: "2.0", precent: "50%")
@@ -295,6 +294,7 @@ extension SubViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
             
             if tableView == subTableViewUp {
+                print(i)
                 
     print(brain.tableUpArrays[i].count)
                 

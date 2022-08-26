@@ -53,7 +53,7 @@ struct K {
         struct Identifier {
             static var segue = "toCounterView"
             static var cellUp = "SubCellUp"
-            static var cellDown = "SubCellDown"
+            static var cellDown = "MainCellDown"
             
         }
     }
