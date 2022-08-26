@@ -55,7 +55,7 @@ class SubViewController: UIViewController,
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//MARK: - Table
+//MARK: - Table ViewDidLoad
         subTableViewUp.delegate = self
         subTableViewUp.dataSource = self
         subTableViewDown.delegate = self
@@ -66,7 +66,7 @@ class SubViewController: UIViewController,
         brain.tableUpArrays.append(brain.tableUpEmptyArray)
         brain.tableDownArrays.append(brain.tableDownEmptyArray)
         
-//MARK: - Pie Chart
+//MARK: - Pie Chart ViewDidLoad
         self.chartView1.layers = [createPlainTextLayer1(), createTextWithLinesLayer1()]
         chartView1.delegate = self
         chartView1.models = createModels1()
@@ -113,6 +113,28 @@ class SubViewController: UIViewController,
                     present(alert, animated: true, completion: nil)
         }
     }
+    
+    @IBAction func subBarRemovedButtonPressed(_ sender: UIBarButtonItem) {
+        
+        if brain.tableUpArrays[i].count == 4 {
+             brain.tableDownArrays[i].remove(at: 4)
+             subTableViewDown.reloadData()
+         }
+         
+         if brain.tableUpArrays[i].count > 0 {
+             brain.tableUpArrays[i].removeLast()
+             subTableViewUp.reloadData()
+             brain.tableDownArrays[i].remove(at: brain.tableUpArrays[i].count)
+             subTableViewDown.reloadData()
+         }
+ //        else if dataStore.mainTableUpArray.count == 0   {
+ //            dataStore.tableDownArrays[i].removeAll()
+ //            mainTableViewDown.reloadData()
+ //        }
+        
+    }
+    
+    
 
     func addActivityToDownTable(activity: String) {
         
@@ -123,6 +145,8 @@ class SubViewController: UIViewController,
         }
         subTableViewDown.reloadData()
     }
+    
+    
         
 
     fileprivate func createModels1() -> [PieSliceModel] {

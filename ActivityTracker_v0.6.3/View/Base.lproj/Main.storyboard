@@ -274,6 +274,11 @@
                                     <action selector="subBarAddButtonPressed:" destination="H9s-Du-eOP" id="pdO-x6-iil"/>
                                 </connections>
                             </barButtonItem>
+                            <barButtonItem title="   -  " id="2qB-jG-AEO">
+                                <connections>
+                                    <action selector="subBarRemovedButtonPressed:" destination="H9s-Du-eOP" id="j8N-Ix-xI9"/>
+                                </connections>
+                            </barButtonItem>
                         </rightBarButtonItems>
                     </navigationItem>
                     <connections>
