@@ -47,7 +47,7 @@ struct K {
             static var cellDown = "MainCellDown"
         }
         static var nibName = "MainDownTableViewCell"
-        static let maxNumberOfActivity = 4
+        
     }
     struct Sub {
         struct Identifier {
@@ -57,5 +57,6 @@ struct K {
             
         }
     }
+    static let maxNumberOfActivity = 4
    
 }

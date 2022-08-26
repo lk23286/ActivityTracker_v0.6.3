@@ -43,8 +43,8 @@ class MainViewController: UIViewController {
         var textField = UITextField()
         let index = brain.tableUpArrays[i].count
 
-        if brain.tableUpArrays[i].count < K.Main.maxNumberOfActivity {
-            print(brain.tableUpArrays[i].count, K.Main.maxNumberOfActivity)
+        if brain.tableUpArrays[i].count < K.maxNumberOfActivity {
+            print(brain.tableUpArrays[i].count, K.maxNumberOfActivity)
             let alert = UIAlertController(title: "Add New Activity", message: "", preferredStyle: .alert)
             let action = UIAlertAction(title: "Add Activity", style: .default) { [self] (action) in
                 

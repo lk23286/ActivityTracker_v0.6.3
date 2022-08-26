@@ -263,17 +263,26 @@
                     </view>
                     <navigationItem key="navigationItem" title="SubActivities" id="6dn-B0-zlg">
                         <barButtonItem key="backBarButtonItem" title="Back" id="Pxi-ps-eHI"/>
-                        <barButtonItem key="rightBarButtonItem" title="&gt;" id="RgP-Gi-Klf">
-                            <connections>
-                                <segue destination="z04-na-TDO" kind="show" id="jAl-La-jlK"/>
-                            </connections>
-                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem title="&gt;" id="RgP-Gi-Klf">
+                                <connections>
+                                    <segue destination="z04-na-TDO" kind="show" id="jAl-La-jlK"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="  +  " id="QN5-Pd-Ukt">
+                                <connections>
+                                    <action selector="subBarAddButtonPressed:" destination="H9s-Du-eOP" id="pdO-x6-iil"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
                     <connections>
                         <outlet property="chartView1" destination="Trf-OK-ASu" id="RNW-bW-8Ha"/>
                         <outlet property="chartView2" destination="RdE-LV-6CH" id="GSn-qX-69f"/>
                         <outlet property="chartView3" destination="8wk-ee-BOk" id="r64-4S-Pu7"/>
                         <outlet property="chartView4" destination="lwv-3t-rUP" id="hYJ-DX-OJq"/>
+                        <outlet property="subTableViewDown" destination="OeT-NZ-jdB" id="dk2-zE-Cop"/>
+                        <outlet property="subTableViewUp" destination="BpQ-Dp-4gn" id="Bcf-mX-Buz"/>
                         <segue destination="z04-na-TDO" kind="show" identifier="toCounterView" id="YCh-E2-lXL"/>
                     </connections>
                 </viewController>
