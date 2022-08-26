@@ -290,13 +290,135 @@ class SubViewController: UIViewController,
 
 //MARK: - Table
 extension SubViewController: UITableViewDataSource, UITableViewDelegate {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        <#code#>
-    }
+   
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        <#code#>
-    }
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+            
+            if tableView == subTableViewUp {
+                
+    print(brain.tableUpArrays[i].count)
+                
+                return brain.tableUpArrays[i].count
+                
+            }
+            
+            if tableView == subTableViewDown {
+                return brain.tableDownArrays[i].count
+            }
+            return Int()
+            
+        }
+
+        func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+            
+            if tableView == subTableViewUp {
+                let mainCellUp = tableView.dequeueReusableCell(withIdentifier: K.Main.Identifier.cellUp, for: indexPath)
+                mainCellUp.textLabel?.text = brain.tableUpArrays[i][indexPath.row]
+                
+                switch indexPath.row {
+                case 0:
+                    mainCellUp.textLabel?.textColor = UIColor.green
+                case 1:
+                    mainCellUp.textLabel?.textColor = UIColor.blue
+                case 2:
+                    mainCellUp.textLabel?.textColor = UIColor.yellow
+                case 3:
+                    mainCellUp.textLabel?.textColor = UIColor.gray
+                default:
+                    mainCellUp.textLabel?.textColor = UIColor.white
+                }
+                mainCellUp.backgroundColor = UIColor.black
+                mainCellUp.textLabel?.font = UIFont.boldSystemFont(ofSize: 25.0)
+                return mainCellUp
+            }
+            
+            if tableView == subTableViewDown {
+                let mainCellDown = tableView.dequeueReusableCell(withIdentifier: K.Main.Identifier.cellDown, for: indexPath) as! MainDownTableViewCell
+                
+                switch indexPath.row {
+                case 0:
+                    mainCellDown.activityLabel.textColor = UIColor.green
+                case 1:
+                    mainCellDown.activityLabel.textColor = UIColor.blue
+                case 2:
+                    mainCellDown.activityLabel.textColor = UIColor.yellow
+                case 3:
+                    mainCellDown.activityLabel.textColor = UIColor.gray
+                case 4:
+                    mainCellDown.activityLabel.textColor = UIColor.white
+                default:
+                    mainCellDown.activityLabel.textColor = UIColor.blue
+                }
+                mainCellDown.goalLabel.textColor = UIColor.green
+                
+                mainCellDown.activityLabel.text = brain.tableDownArrays[i][indexPath.row].activity
+                mainCellDown.achivedLabel.text = brain.tableDownArrays[i][indexPath.row].achived
+                mainCellDown.separatorLabel.text = brain.tableDownArrays[i][indexPath.row].separator
+                mainCellDown.goalLabel.text = brain.tableDownArrays[i][indexPath.row].goal
+                mainCellDown.unitLabel.text = brain.tableDownArrays[i][indexPath.row].unit
+                mainCellDown.precentLabel.text = brain.tableDownArrays[i][indexPath.row].precent
+                
+                return mainCellDown
+            }
+            
+            return UITableViewCell()
+            
+        }
+        
+        func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+            
+            return true
+        }
+        
+        
+        func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+            
+            if tableView == subTableViewUp {
+                print(indexPath.row)
+                performSegue(withIdentifier: K.Main.Identifier.segue, sender: self)
+            }
+            if tableView == subTableViewDown {
+                
+                var textField = UITextField()
+                let activity = brain.tableDownArrays[i][indexPath.row].activity
+                let actualGoal = brain.tableDownArrays[i][indexPath.row].goal
+                let actualyAchived = brain.tableDownArrays[i][indexPath.row].achived
+                
+                let alert = UIAlertController(title: "You can modify Goal of", message: activity, preferredStyle: .alert)
+                let action = UIAlertAction(title: "Add Goal", style: .default) { [self] (action) in
+                    let newGoal = textField.text!
+                    
+                    if newGoal != "" {
+                        brain.tableDownArrays[i][indexPath.row].goal = newGoal
+                        brain.tableDownArrays[i][indexPath.row].precent =  calculatePrecentFrom(achived: actualyAchived, goal: newGoal)
+                        subTableViewDown.reloadData()
+                    }
+
+                }
+                
+                alert.addTextField { (alertTextField) in
+                    alertTextField.placeholder = actualGoal
+                    textField = alertTextField
+                }
+                
+                alert.addAction(action)
+                present(alert, animated: true, completion: nil)
+            }
+        }
+      
+        func calculatePrecentFrom( achived: String, goal: String) -> String {
+            
+            let achivedNumber = Double(achived) ?? 1.0
+            let formatter = NumberFormatter()
+            formatter.numberStyle = .percent
+            if let goalNumber = Double(goal) {
+               let percent = achivedNumber / goalNumber
+               return formatter.string(from: percent as NSNumber) ?? ""
+            } else {
+              return "???"
+            }
+        }
+
     
 }
 
