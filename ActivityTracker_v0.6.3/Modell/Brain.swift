@@ -7,11 +7,10 @@
 
 import Foundation
 
-
 struct Brain {
     
-     var tableUpEmptyArray = [String]()
-     var tableDownEmptyArray = [DownTableRecord]()
+    var tableUpEmptyArray = [String]()
+    var tableDownEmptyArray = [DownTableRecord]()
 
     var mainTableUpDefaultArray = ["Swift", "Sport", "Meditation", "Sleep"]
     var mainTableDownDefaultArray = [
@@ -21,12 +20,8 @@ struct Brain {
         DownTableRecord(activity: "Sleep", achived: "7.0", goal: "7.0", precent: "100%"),
         DownTableRecord(activity: "Break", achived: "1.0", goal: "2.0", precent: "50%")
                         ]
-
- 
-    
     var tableUpArrays = [[String]]()
     var tableDownArrays = [[DownTableRecord]]()
-    
 }
 
 struct DownTableRecord {
@@ -36,7 +31,6 @@ struct DownTableRecord {
     var goal: String
     let unit = "hours"
     var precent : String
-    
 }
 
 struct K {
@@ -47,16 +41,13 @@ struct K {
             static var cellDown = "MainCellDown"
         }
         static var nibName = "MainDownTableViewCell"
-        
     }
     struct Sub {
         struct Identifier {
             static var segue = "toCounterView"
             static var cellUp = "SubCellUp"
             static var cellDown = "MainCellDown"
-            
         }
     }
     static let maxNumberOfActivity = 4
-   
 }

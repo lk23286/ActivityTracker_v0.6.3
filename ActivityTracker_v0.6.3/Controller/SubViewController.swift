@@ -318,64 +318,61 @@ extension SubViewController: UITableViewDataSource, UITableViewDelegate {
         func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
             
             if tableView == subTableViewUp {
-                let mainCellUp = tableView.dequeueReusableCell(withIdentifier: K.Sub.Identifier.cellUp, for: indexPath)
-                mainCellUp.textLabel?.text = brain.tableUpArrays[i][indexPath.row]
+                let cellUp = tableView.dequeueReusableCell(withIdentifier: K.Sub.Identifier.cellUp, for: indexPath)
+                cellUp.textLabel?.text = brain.tableUpArrays[i][indexPath.row]
                 
                 switch indexPath.row {
                 case 0:
-                    mainCellUp.textLabel?.textColor = UIColor.green
+                    cellUp.textLabel?.textColor = UIColor.green
                 case 1:
-                    mainCellUp.textLabel?.textColor = UIColor.blue
+                    cellUp.textLabel?.textColor = UIColor.blue
                 case 2:
-                    mainCellUp.textLabel?.textColor = UIColor.yellow
+                    cellUp.textLabel?.textColor = UIColor.yellow
                 case 3:
-                    mainCellUp.textLabel?.textColor = UIColor.gray
+                    cellUp.textLabel?.textColor = UIColor.gray
                 default:
-                    mainCellUp.textLabel?.textColor = UIColor.white
+                    cellUp.textLabel?.textColor = UIColor.white
                 }
-                mainCellUp.backgroundColor = UIColor.black
-                mainCellUp.textLabel?.font = UIFont.boldSystemFont(ofSize: 25.0)
-                return mainCellUp
+                cellUp.backgroundColor = UIColor.black
+                cellUp.textLabel?.font = UIFont.boldSystemFont(ofSize: 25.0)
+                return cellUp
             }
             
             if tableView == subTableViewDown {
-                let mainCellDown = tableView.dequeueReusableCell(withIdentifier: K.Sub.Identifier.cellDown, for: indexPath) as! MainDownTableViewCell
+                let cellDown = tableView.dequeueReusableCell(withIdentifier: K.Sub.Identifier.cellDown, for: indexPath) as! MainDownTableViewCell
                 
                 switch indexPath.row {
                 case 0:
-                    mainCellDown.activityLabel.textColor = UIColor.green
+                    cellDown.activityLabel.textColor = UIColor.green
                 case 1:
-                    mainCellDown.activityLabel.textColor = UIColor.blue
+                    cellDown.activityLabel.textColor = UIColor.blue
                 case 2:
-                    mainCellDown.activityLabel.textColor = UIColor.yellow
+                    cellDown.activityLabel.textColor = UIColor.yellow
                 case 3:
-                    mainCellDown.activityLabel.textColor = UIColor.gray
+                    cellDown.activityLabel.textColor = UIColor.gray
                 case 4:
-                    mainCellDown.activityLabel.textColor = UIColor.white
+                    cellDown.activityLabel.textColor = UIColor.white
                 default:
-                    mainCellDown.activityLabel.textColor = UIColor.blue
+                    cellDown.activityLabel.textColor = UIColor.blue
                 }
-                mainCellDown.goalLabel.textColor = UIColor.green
+                cellDown.goalLabel.textColor = UIColor.green
                 
-                mainCellDown.activityLabel.text = brain.tableDownArrays[i][indexPath.row].activity
-                mainCellDown.achivedLabel.text = brain.tableDownArrays[i][indexPath.row].achived
-                mainCellDown.separatorLabel.text = brain.tableDownArrays[i][indexPath.row].separator
-                mainCellDown.goalLabel.text = brain.tableDownArrays[i][indexPath.row].goal
-                mainCellDown.unitLabel.text = brain.tableDownArrays[i][indexPath.row].unit
-                mainCellDown.precentLabel.text = brain.tableDownArrays[i][indexPath.row].precent
+                cellDown.activityLabel.text = brain.tableDownArrays[i][indexPath.row].activity
+                cellDown.achivedLabel.text = brain.tableDownArrays[i][indexPath.row].achived
+                cellDown.separatorLabel.text = brain.tableDownArrays[i][indexPath.row].separator
+                cellDown.goalLabel.text = brain.tableDownArrays[i][indexPath.row].goal
+                cellDown.unitLabel.text = brain.tableDownArrays[i][indexPath.row].unit
+                cellDown.precentLabel.text = brain.tableDownArrays[i][indexPath.row].precent
                 
-                return mainCellDown
+                return cellDown
             }
-            
             return UITableViewCell()
-            
         }
         
         func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
             
             return true
         }
-        
         
         func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
             
