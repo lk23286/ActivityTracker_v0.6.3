@@ -88,7 +88,7 @@
                 <outlet property="separatorLabel" destination="Cqg-EW-I4Q" id="A7x-Ux-4cY"/>
                 <outlet property="unitLabel" destination="lz5-JL-u8m" id="1V9-Zy-aTU"/>
             </connections>
-            <point key="canvasLocation" x="243.47826086956525" y="113.50446428571428"/>
+            <point key="canvasLocation" x="184" y="63"/>
         </tableViewCell>
     </objects>
 </document>

@@ -16,7 +16,7 @@ class SubViewController: UIViewController,
     @IBOutlet weak var subTableViewDown: UITableView!
     
     var brain = Brain()
-    var i = 1   // it defines which table..Arrays are used to the the Main Activity View
+    var i = 0   // it defines which table..Arrays are used to the the Main Activity View
                 // 0: MainActivities
                 // 1: SubActivities of first Activity
                 // 2: SubActivities of second Activity
@@ -65,6 +65,12 @@ class SubViewController: UIViewController,
         
         brain.tableUpArrays.append(brain.tableUpEmptyArray)
         brain.tableDownArrays.append(brain.tableDownEmptyArray)
+        
+for array in brain.tableDownArrays[0] {
+            print(array)
+                
+            }
+        
         
 //MARK: - Pie Chart ViewDidLoad
         self.chartView1.layers = [createPlainTextLayer1(), createTextWithLinesLayer1()]
@@ -312,7 +318,7 @@ extension SubViewController: UITableViewDataSource, UITableViewDelegate {
         func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
             
             if tableView == subTableViewUp {
-                let mainCellUp = tableView.dequeueReusableCell(withIdentifier: K.Main.Identifier.cellUp, for: indexPath)
+                let mainCellUp = tableView.dequeueReusableCell(withIdentifier: K.Sub.Identifier.cellUp, for: indexPath)
                 mainCellUp.textLabel?.text = brain.tableUpArrays[i][indexPath.row]
                 
                 switch indexPath.row {
@@ -333,7 +339,7 @@ extension SubViewController: UITableViewDataSource, UITableViewDelegate {
             }
             
             if tableView == subTableViewDown {
-                let mainCellDown = tableView.dequeueReusableCell(withIdentifier: K.Main.Identifier.cellDown, for: indexPath) as! MainDownTableViewCell
+                let mainCellDown = tableView.dequeueReusableCell(withIdentifier: K.Sub.Identifier.cellDown, for: indexPath) as! MainDownTableViewCell
                 
                 switch indexPath.row {
                 case 0:
@@ -375,7 +381,7 @@ extension SubViewController: UITableViewDataSource, UITableViewDelegate {
             
             if tableView == subTableViewUp {
                 print(indexPath.row)
-                performSegue(withIdentifier: K.Main.Identifier.segue, sender: self)
+                performSegue(withIdentifier: K.Sub.Identifier.segue, sender: self)
             }
             if tableView == subTableViewDown {
                 
