@@ -52,6 +52,8 @@ class SubViewController: UIViewController,
     
     fileprivate var currentColorIndex = 0
     
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -66,13 +68,9 @@ class SubViewController: UIViewController,
         brain.tableUpArrays.append(brain.tableUpEmptyArray)
         brain.tableDownArrays.append(brain.tableDownEmptyArray)
         
-for array in brain.tableDownArrays[0] {
-            print(array)
-                
-            }
-        
         
 //MARK: - Pie Chart ViewDidLoad
+        
         self.chartView1.layers = [createPlainTextLayer1(), createTextWithLinesLayer1()]
         chartView1.delegate = self
         chartView1.models = createModels1()
@@ -90,13 +88,22 @@ for array in brain.tableDownArrays[0] {
                 chartView4.models = createModels4()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        print("SubviewWillAppear")
+        
+        print(i)
+        let x = brain.tableDownArrays[i]
+        
+        print(x)
+    }
+    
     @IBAction func subBarAddButtonPressed(_ sender: Any) {
         
         var textField = UITextField()
         let index = brain.tableUpArrays[i].count
 
         if brain.tableUpArrays[i].count < K.maxNumberOfActivity {
-            print(brain.tableUpArrays[i].count, K.maxNumberOfActivity)
+           
             let alert = UIAlertController(title: "Add New Activity", message: "", preferredStyle: .alert)
             let action = UIAlertAction(title: "Add Activity", style: .default) { [self] (action) in
                 
@@ -133,31 +140,38 @@ for array in brain.tableDownArrays[0] {
              brain.tableDownArrays[i].remove(at: brain.tableUpArrays[i].count)
              subTableViewDown.reloadData()
          }
- //        else if dataStore.mainTableUpArray.count == 0   {
- //            dataStore.tableDownArrays[i].removeAll()
- //            mainTableViewDown.reloadData()
- //        }
+
         
     }
     
     
     func addActivityToDownTable(activity: String) {
         
+        
         let downTableRecord = DownTableRecord(activity: activity, achived: "1.0", goal: "2.0", precent: "50%")
         brain.tableDownArrays[i].append(downTableRecord)
-        if brain.tableDownArrays[i].count == 4 {
+        
+        let index = brain.tableDownArrays[i].count - 1
+        let achived = brain.tableDownArrays[i][index].achived
+        let goal = brain.tableDownArrays[i][index].goal
+        
+        brain.modellValue[index].dark = Double(achived) ?? 0.0
+        brain.modellValue[index].light = Double(goal) ?? 0.0
+     
+        
+        if index == 4 {
             brain.tableDownArrays[i].append(DownTableRecord(activity: "Break", achived: "1.0", goal: "2.0", precent: "50%"))
         }
         subTableViewDown.reloadData()
     }
     
     
-        
+    
 
     fileprivate func createModels1() -> [PieSliceModel] {
             let models = [
-                PieSliceModel(value: 20, color: colors[0]),
-                PieSliceModel(value: 80, color: colors[1])
+                PieSliceModel(value: brain.modellValue[0].dark, color: colors[0]),
+                PieSliceModel(value: brain.modellValue[0].light, color: colors[1])
             ]
             currentColorIndex = models.count
             return models
@@ -165,8 +179,8 @@ for array in brain.tableDownArrays[0] {
  
     fileprivate func createModels2() -> [PieSliceModel] {
             let models = [
-                PieSliceModel(value: 15, color: colors[2]),
-                PieSliceModel(value: 85, color: colors[3])
+                PieSliceModel(value: brain.modellValue[1].dark, color: colors[2]),
+                PieSliceModel(value: brain.modellValue[1].light, color: colors[3])
             ]
             currentColorIndex = models.count
             return models
@@ -174,8 +188,8 @@ for array in brain.tableDownArrays[0] {
   
     fileprivate func createModels3() -> [PieSliceModel] {
             let models = [
-                PieSliceModel(value: 60, color: colors[4]),
-                PieSliceModel(value: 40, color: colors[5]),
+                PieSliceModel(value: brain.modellValue[2].dark, color: colors[4]),
+                PieSliceModel(value: brain.modellValue[2].light, color: colors[5]),
             ]
             currentColorIndex = models.count
             return models
@@ -183,8 +197,8 @@ for array in brain.tableDownArrays[0] {
     
     fileprivate func createModels4() -> [PieSliceModel] {
             let models = [
-                PieSliceModel(value: 90, color: colors[6]),
-                PieSliceModel(value: 10, color: colors[7])
+                PieSliceModel(value: brain.modellValue[3].dark, color: colors[6]),
+                PieSliceModel(value: brain.modellValue[3].light, color: colors[7])
             ]
             currentColorIndex = models.count
             return models
@@ -300,9 +314,6 @@ extension SubViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
             
             if tableView == subTableViewUp {
-                print(i)
-                
-    print(brain.tableUpArrays[i].count)
                 
                 return brain.tableUpArrays[i].count
                 
@@ -377,7 +388,6 @@ extension SubViewController: UITableViewDataSource, UITableViewDelegate {
         func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
             
             if tableView == subTableViewUp {
-                print(indexPath.row)
                 performSegue(withIdentifier: K.Sub.Identifier.segue, sender: self)
             }
             if tableView == subTableViewDown {

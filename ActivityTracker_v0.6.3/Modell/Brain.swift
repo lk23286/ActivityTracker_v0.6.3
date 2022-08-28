@@ -22,11 +22,27 @@ struct Brain {
                         ]
     var tableUpArrays = [[String]]()
     var tableDownArrays = [[DownTableRecord]]()
+    
+    var modellValue = [
+        Value(dark: 5, light: 95),
+        Value(dark: 10, light: 90),
+        Value(dark: 20, light: 80),
+        Value(dark: 30, light: 70),
+        Value(dark: 40, light: 60)
+        ]
+    
+    var defaultValue = Value(dark: 10, light: 90)
+    
+}
+
+struct Value {
+    var dark: Double
+    var light: Double
 }
 
 struct DownTableRecord {
     let activity: String
-    let achived: String
+    var achived: String
     let separator = "of"
     var goal: String
     let unit = "hours"
